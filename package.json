@@ -1,0 +1,19 @@
+{
+  "name": "emgovpower.github.io",
+  "version": "1.0.0",
+  "description": "trello connector",
+  "repository": {
+    "type": "git",
+    "url": "emgovpower.github.io"
+  },
+  "license": "ISC",
+  "author": "ernie2",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

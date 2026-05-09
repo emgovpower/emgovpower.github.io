@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Estimate Size</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 16px;
+      }
+      h1 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+      }
+      label {
+        display: block;
+        margin-bottom: 12px;
+      }
+      input,
+      button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+      }
+      button {
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Estimate Size</h1>
+    <form id="estimate-form">
+      <label>
+        Card estimate
+        <input id="estimate" name="estimate" type="number" min="1" step="1" placeholder="Enter a number" />
+      </label>
+      <button type="submit">Save estimate</button>
+    </form>
+
+    <script src="https://p.trellocdn.com/power-up.min.js"></script>
+    <script>
+      var t = TrelloPowerUp.iframe();
+
+      function updateForm(value) {
+        if (value) {
+          document.getElementById('estimate').value = value;
+        }
+      }
+
+      function onSubmit(event) {
+        event.preventDefault();
+        var estimate = document.getElementById('estimate').value.trim();
+        if (!estimate) {
+          return;
+        }
+        t.set('card', 'shared', 'estimateSize', estimate).then(function() {
+          return t.closePopup();
+        });
+      }
+
+      document.getElementById('estimate-form').addEventListener('submit', onSubmit);
+
+      t.render(function() {
+        t.get('card', 'shared', 'estimateSize').then(updateForm);
+      });
+    </script>
+  </body>
+</html>
