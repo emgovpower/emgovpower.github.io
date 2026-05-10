@@ -8,13 +8,14 @@
          default-src 'self';
          script-src 'self' https://p.trellocdn.com https://p.trellocdn.com/power-up.min.js;
          style-src 'self' 'unsafe-inline';
-         connect-src 'self' https://trello.com;
+         connect-src 'self' https://trello.com https://atlassian-cookies.prod-east.frontend.publis.atl-paas.net;
          frame-ancestors 'self' https://trello.com;
          object-src 'none';
          base-uri 'self';">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />         
   </head>
   <body>
-    trello power up sample rev 1.01
+    trello power up sample rev 1.02
     <script src="https://p.trellocdn.com/power-up.min.js"></script>
     <script src="/client.js"></script>
   </body>
