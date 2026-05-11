@@ -7,11 +7,11 @@
          default-src 'self';
          script-src 'self' https://p.trellocdn.com https://p.trellocdn.com/power-up.min.js;
          connect-src 'self' https://trello.com https://ds-cdn.prod-east.frontend.public.atl-paas.net 
-                          https://atlassian-cookies.prod-east.frontend.public.atl-paas.net
+                          https://atlassian-cookies.prod-east.frontend.public.atl-paas.net  unsafe-inline;
          frame-ancestors 'self' https://trello.com;
          object-src 'none';
-         style-src https://ds-cdn.prod-east.frontend.public.atl-paas.net;
-         font-src https://ds-cdn.prod-east.frontend.public.atl-paas.net;
+         style-src https://ds-cdn.prod-east.frontend.public.atl-paas.net unsafe-inline;
+         font-src https://ds-cdn.prod-east.frontend.public.atl-paas.net  unsafe-inline;
          base-uri 'self';">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
