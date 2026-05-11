@@ -4,18 +4,19 @@
     <meta charset="utf-8" />
     <title>emgovpower Trello Power-Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta http-equiv="Content-Security-Policy"
-  content="
-    default-src 'self';
-    script-src 'self' https://p.trellocdn.com 'unsafe-inline';
-    style-src 'self' 'unsafe-inline';
-    connect-src 'self' https://trello.com https://*.trello.com https://atlassian-cookies.prod-east.frontend.public.atl-paas.net;
-    object-src 'none';
-    base-uri 'self';
-  ">   
+    <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' https://p.trellocdn.com 'unsafe-inline';
+        style-src 'self' 'unsafe-inline';
+        connect-src 'self' https://trello.com https://*.trello.com https://p.trellocdn.com/power-up.min.js 
+            https://atlassian-cookies.prod-east.frontend.public.atl-paas.net;
+        object-src 'none';
+        base-uri 'self';
+      ">   
   </head>
   <body>
-    trello power up sample rev 1.12 try limited meta tag
+    trello power up sample rev 1.13 try limited meta tag
     <script src="https://p.trellocdn.com/power-up.min.js"></script>
     <script src="/client.js"></script>
   </body>
