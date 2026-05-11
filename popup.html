@@ -5,9 +5,9 @@
     <title>Estimate Size</title>
 <meta http-equiv="Content-Security-Policy" content="
          default-src 'self';
-         script-src 'self' https://p.trellocdn.com https://p.trellocdn.com/power-up.min.js;
+         script-src 'self' https://p.trellocdn.com https://p.trellocdn.com/power-up.min.js  unsafe-inline;
          connect-src 'self' https://trello.com https://ds-cdn.prod-east.frontend.public.atl-paas.net 
-                          https://atlassian-cookies.prod-east.frontend.public.atl-paas.net  
+                          https://atlassian-cookies.prod-east.frontend.public.atl-paas.net  https://p.trellocdn.com/power-up.min.js
                           https://atlassian-cookies.prod-east.frontend.public.atl-paas.net/categories_COOKIE.json unsafe-inline;
          frame-ancestors 'self' https://trello.com;
          object-src 'none';
