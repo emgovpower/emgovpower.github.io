@@ -9,14 +9,14 @@
         default-src 'self';
         script-src 'self' https://p.trellocdn.com 'unsafe-inline';
         style-src 'self' 'unsafe-inline';
-        connect-src 'self' https://trello.com https://*.trello.com https://p.trellocdn.com/power-up.min.js 
+        connect-src 'self' https://trello.com https://*.trello.com https://p.trellocdn.com/power-up.min.* 
             https://atlassian-cookies.prod-east.frontend.public.atl-paas.net;
         object-src 'none';
         base-uri 'self';
       ">   
   </head>
   <body>
-    trello power up sample rev 1.13 try limited meta tag
+    trello power up sample rev 1.14 more csp crap
     <script src="https://p.trellocdn.com/power-up.min.js"></script>
     <script src="/client.js"></script>
   </body>
